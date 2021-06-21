@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftWidgets
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setDefaultWidgetAppearance()
         return true
     }
 
@@ -34,3 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func setDefaultWidgetAppearance() {
+        Settings.initDefaults(Config())
+    }
+}
+
+class Config: SettingsConfig {
+    var selectedColor: String { "eeeeee" }
+    var primaryColor: String { "ff0000" }
+}
