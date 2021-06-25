@@ -7,5 +7,5 @@ target 'MyTestApp' do
 
   pod 'SwiftWidgets'
   pod 'SnapKit', '~> 5.0.0'
-
+  pod 'MultiSlider'
 end

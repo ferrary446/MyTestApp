@@ -6,6 +6,7 @@
 //
 import SwiftWidgets
 import SnapKit
+import MultiSlider
 
 class SliderWidget: Widget, WidgetInstantiable {
     
@@ -14,21 +15,21 @@ class SliderWidget: Widget, WidgetInstantiable {
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var rangeLabel: UILabel!
     
-    @IBOutlet weak var rangeSliderOutlet: UISlider!
+    @IBOutlet weak var rangeSliderOutlet: MultiSlider!
     
     public let labelComp = LabelComponent()
     
     override func load() {
         super.load()
         
-//        spacingConstraint.constant = CGFloat(model.titleImagespacing)
-//        imageComp.setup(target: imageView, model: model.image, widgetModel: model)
+        //        spacingConstraint.constant = CGFloat(model.titleImagespacing)
+        //        imageComp.setup(target: imageView, model: model.image, widgetModel: model)
         labelComp.setup(target: mainLabel, model: model.main, widgetModel: model)
         labelComp.setup(target: rangeLabel, model: model.range, widgetModel: model)
         
-        rangeSliderOutlet.minimumTrackTintColor = #colorLiteral(red: 0.8504058376, green: 0.8485570764, blue: 0.8203452312, alpha: 1)
-        rangeSliderOutlet.maximumTrackTintColor = UIColor(named: "customColor")
+        rangeSliderOutlet.tintColor = UIColor(named: "customColor")
     }
+    
 }
 
 class SliderWidgetModel: WidgetModel {
