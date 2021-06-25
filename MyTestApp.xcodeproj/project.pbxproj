@@ -12,9 +12,11 @@
 		8312BDB726774A710054E632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8312BDB526774A710054E632 /* Main.storyboard */; };
 		8312BDB926774A740054E632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8312BDB826774A740054E632 /* Assets.xcassets */; };
 		8312BDBC26774A740054E632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8312BDBA26774A740054E632 /* LaunchScreen.storyboard */; };
-		8334ABB6267C4F0A00BDFA70 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334ABB5267C4F0A00BDFA70 /* Chapter.swift */; };
-		8334ABB8267C5C1E00BDFA70 /* Chapter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8334ABB7267C5C1E00BDFA70 /* Chapter.xib */; };
+		8334ABB6267C4F0A00BDFA70 /* SliderWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334ABB5267C4F0A00BDFA70 /* SliderWidget.swift */; };
+		8334ABB8267C5C1E00BDFA70 /* SliderWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8334ABB7267C5C1E00BDFA70 /* SliderWidget.xib */; };
 		83CC0CA1267913AC00ECA81F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC0CA0267913AC00ECA81F /* ViewController.swift */; };
+		83E482AF2685021600AA28E5 /* SegmentWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E482AE2685021600AA28E5 /* SegmentWidget.xib */; };
+		83E482B1268517C000AA28E5 /* SegmentWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E482B0268517C000AA28E5 /* SegmentWidget.swift */; };
 		B99C7C034FE27CB92E84D13D /* Pods_MyTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BBE5C484EB95502A5851ED /* Pods_MyTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +28,12 @@
 		8312BDB826774A740054E632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8312BDBB26774A740054E632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8312BDBD26774A740054E632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8334ABB5267C4F0A00BDFA70 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
-		8334ABB7267C5C1E00BDFA70 /* Chapter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chapter.xib; sourceTree = "<group>"; };
+		8334ABB5267C4F0A00BDFA70 /* SliderWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderWidget.swift; sourceTree = "<group>"; };
+		8334ABB7267C5C1E00BDFA70 /* SliderWidget.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderWidget.xib; sourceTree = "<group>"; };
+		8399C8C72680964500086BF8 /* Jost-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jost-Regular.ttf"; path = "../../../../../../Downloads/Jost/static/Jost-Regular.ttf"; sourceTree = "<group>"; };
 		83CC0CA0267913AC00ECA81F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83E482AE2685021600AA28E5 /* SegmentWidget.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentWidget.xib; sourceTree = "<group>"; };
+		83E482B0268517C000AA28E5 /* SegmentWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentWidget.swift; sourceTree = "<group>"; };
 		A4BBE5C484EB95502A5851ED /* Pods_MyTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE634716BEAEAED7B62B8D9F /* Pods-MyTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MyTestApp/Pods-MyTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CDBA926F9BC1F4822DA99810 /* Pods-MyTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestApp.release.xcconfig"; path = "Target Support Files/Pods-MyTestApp/Pods-MyTestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +64,6 @@
 			children = (
 				8312BDAE26774A710054E632 /* MyTestApp */,
 				8312BDAD26774A710054E632 /* Products */,
-				83B37188267B6C0400C3CDED /* Widgets */,
 				F666F55AAAC0767E0F84F245 /* Pods */,
 				01D29DB8079D80A0332C3766 /* Frameworks */,
 			);
@@ -76,22 +80,66 @@
 		8312BDAE26774A710054E632 /* MyTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				8312BDAF26774A710054E632 /* AppDelegate.swift */,
-				8312BDB126774A710054E632 /* SceneDelegate.swift */,
-				8312BDB526774A710054E632 /* Main.storyboard */,
-				83CC0CA0267913AC00ECA81F /* ViewController.swift */,
-				8312BDB826774A740054E632 /* Assets.xcassets */,
-				8312BDBA26774A740054E632 /* LaunchScreen.storyboard */,
-				8312BDBD26774A740054E632 /* Info.plist */,
+				8399C8C32680958400086BF8 /* ViewControllers */,
+				8399C8C22680955C00086BF8 /* Storyboards */,
+				8399C8C5268095C500086BF8 /* Resources */,
+				8399C8C4268095A700086BF8 /* Supports */,
+				83B37188267B6C0400C3CDED /* Widgets */,
 			);
 			path = MyTestApp;
+			sourceTree = "<group>";
+		};
+		8399C8C22680955C00086BF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8312BDB526774A710054E632 /* Main.storyboard */,
+				8312BDBA26774A740054E632 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8399C8C32680958400086BF8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83CC0CA0267913AC00ECA81F /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8399C8C4268095A700086BF8 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				8312BDBD26774A740054E632 /* Info.plist */,
+				8312BDAF26774A710054E632 /* AppDelegate.swift */,
+				8312BDB126774A710054E632 /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		8399C8C5268095C500086BF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8399C8C62680963200086BF8 /* Fonts */,
+				8312BDB826774A740054E632 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8399C8C62680963200086BF8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8399C8C72680964500086BF8 /* Jost-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		83B37188267B6C0400C3CDED /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				8334ABB5267C4F0A00BDFA70 /* Chapter.swift */,
-				8334ABB7267C5C1E00BDFA70 /* Chapter.xib */,
+				8334ABB5267C4F0A00BDFA70 /* SliderWidget.swift */,
+				8334ABB7267C5C1E00BDFA70 /* SliderWidget.xib */,
+				83E482B0268517C000AA28E5 /* SegmentWidget.swift */,
+				83E482AE2685021600AA28E5 /* SegmentWidget.xib */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -165,9 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8312BDBC26774A740054E632 /* LaunchScreen.storyboard in Resources */,
+				83E482AF2685021600AA28E5 /* SegmentWidget.xib in Resources */,
 				8312BDB926774A740054E632 /* Assets.xcassets in Resources */,
 				8312BDB726774A710054E632 /* Main.storyboard in Resources */,
-				8334ABB8267C5C1E00BDFA70 /* Chapter.xib in Resources */,
+				8334ABB8267C5C1E00BDFA70 /* SliderWidget.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8334ABB6267C4F0A00BDFA70 /* Chapter.swift in Sources */,
+				8334ABB6267C4F0A00BDFA70 /* SliderWidget.swift in Sources */,
+				83E482B1268517C000AA28E5 /* SegmentWidget.swift in Sources */,
 				8312BDB026774A710054E632 /* AppDelegate.swift in Sources */,
 				83CC0CA1267913AC00ECA81F /* ViewController.swift in Sources */,
 				8312BDB226774A710054E632 /* SceneDelegate.swift in Sources */,
@@ -373,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T264893398;
-				INFOPLIST_FILE = MyTestApp/Info.plist;
+				INFOPLIST_FILE = MyTestApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T264893398;
-				INFOPLIST_FILE = MyTestApp/Info.plist;
+				INFOPLIST_FILE = MyTestApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

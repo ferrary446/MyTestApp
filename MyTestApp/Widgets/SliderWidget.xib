@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Jost-Regular.ttf">
+            <string>Jost-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="8nO-Uz-oNK" customClass="SliderWidget" customModule="MyTestApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNI-m0-UPW">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nn8-dW-oXW">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="23.333333333333332"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lange" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-FL-vrx">
+                                    <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="23.333333333333332"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="23.333333333333332" id="mhy-50-w7f"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Jost-Regular" family="Jost" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0km - 52km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-m1-434">
+                                    <rect key="frame" x="171.66666666666663" y="0.0" width="171.33333333333337" height="23.333333333333332"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="23.333333333333332" id="zJj-H5-5aC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Jost-Regular" family="Jost" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SD2-v9-51t">
+                            <rect key="frame" x="-2" y="34.333333333333336" width="347" height="9.6666666666666643"/>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Nn8-dW-oXW" firstAttribute="top" secondItem="WNI-m0-UPW" secondAttribute="top" id="1iA-B5-HSq"/>
+                        <constraint firstAttribute="bottom" secondItem="SD2-v9-51t" secondAttribute="bottom" id="GU8-dR-ag0"/>
+                        <constraint firstAttribute="trailing" secondItem="Nn8-dW-oXW" secondAttribute="trailing" id="PNy-ke-Xcw"/>
+                        <constraint firstItem="SD2-v9-51t" firstAttribute="leading" secondItem="WNI-m0-UPW" secondAttribute="leading" id="dq4-54-OUX"/>
+                        <constraint firstAttribute="trailing" secondItem="SD2-v9-51t" secondAttribute="trailing" id="kYh-4R-qTB"/>
+                        <constraint firstItem="Nn8-dW-oXW" firstAttribute="leading" secondItem="WNI-m0-UPW" secondAttribute="leading" id="vpv-OC-NCI"/>
+                        <constraint firstItem="SD2-v9-51t" firstAttribute="top" secondItem="Nn8-dW-oXW" secondAttribute="bottom" constant="11" id="yNu-GF-Had"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3LY-FG-aaE"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WNI-m0-UPW" firstAttribute="trailing" secondItem="3LY-FG-aaE" secondAttribute="trailing" id="14U-dE-1bh"/>
+                <constraint firstItem="WNI-m0-UPW" firstAttribute="leading" secondItem="3LY-FG-aaE" secondAttribute="leading" id="V3y-ZJ-zuI"/>
+                <constraint firstItem="WNI-m0-UPW" firstAttribute="top" secondItem="8nO-Uz-oNK" secondAttribute="top" id="Zda-9c-dUd"/>
+                <constraint firstItem="WNI-m0-UPW" firstAttribute="bottom" secondItem="3LY-FG-aaE" secondAttribute="bottom" id="prl-qB-IZJ"/>
+            </constraints>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainLabel" destination="F5O-FL-vrx" id="aCJ-1L-vJB"/>
+                <outlet property="rangeLabel" destination="Jjb-m1-434" id="RKM-TO-kv8"/>
+                <outlet property="rangeSliderOutlet" destination="SD2-v9-51t" id="qBX-dp-Yo6"/>
+            </connections>
+            <point key="canvasLocation" x="559.23076923076917" y="-122.98578199052132"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
